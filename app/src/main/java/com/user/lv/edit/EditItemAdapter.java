@@ -1,5 +1,6 @@
 package com.user.lv.edit;
 
+import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.user.lv.R;
+import com.user.lv.utils.DeviceUtils;
+import com.user.lv.utils.ViewUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,27 +19,24 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class EditItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class EditItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements  View.OnClickListener{
     private static final String TAG = EditItemAdapter.class.getSimpleName();
     private List<EditItem> mEditItemList;
-
     public EditItemAdapter(List<EditItem> mList){
-        Log.d(TAG, "EditItemAdapter: ");
         mEditItemList = mList;
     }
 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Log.d(TAG, "onCreateViewHolder: ");
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_edit,parent,false);
+        view.setOnClickListener(this);
         return new ItemViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         ItemViewHolder item;
-        Log.d(TAG, "onBindViewHolder: ");
         if(holder instanceof  ItemViewHolder){
             item = (ItemViewHolder)holder;
             item.bind(mEditItemList.get(position),position);
@@ -46,13 +46,18 @@ public class EditItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public int getItemCount() {
         int size = mEditItemList.size();
-        Log.d(TAG, "getItemCount: "+size);
         return size;
     }
 
+    @Override
+    public void onClick(View v) {
+        Log.d(TAG, "onClick: id "+v.getId()+" Tag "+v.getTag());
+    }
+
     public class ItemViewHolder extends RecyclerView.ViewHolder{
+
         final TextView mTvItem;
-            final ImageView mIvItem;
+        final ImageView mIvItem;
         final View mDvRight;
         private final View mRvRoot;
 
@@ -60,24 +65,17 @@ public class EditItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
             super(itemView);
             Log.d(TAG, "ItemViewHolder: ");
-            mTvItem = itemView.findViewById(R.id.tv_item);
-            mIvItem = itemView.findViewById(R.id.iv_item);
+            mTvItem  = itemView.findViewById(R.id.tv_item);
+            mIvItem  = itemView.findViewById(R.id.iv_item);
             mDvRight = itemView.findViewById(R.id.dv_right);
-            mRvRoot = itemView.findViewById(R.id.rl_item);
-            ViewGroup.LayoutParams layoutParams =  mRvRoot.getLayoutParams();
-            layoutParams.width = 1024/3;
-            layoutParams.height =1024/3;
-            mRvRoot.setLayoutParams(layoutParams);
-
-            ViewGroup.LayoutParams layoutParams2 =  mIvItem.getLayoutParams();
-            layoutParams.width = 1024/10;
-            layoutParams.height =1024/10;
-            mIvItem.setLayoutParams(layoutParams2);
-
+            mRvRoot  = itemView.findViewById(R.id.rl_item);
+            int item_size  = DeviceUtils.getDisplayWidth(mRvRoot.getContext())/8;
+            int image_size =item_size-DeviceUtils.dip2px(mRvRoot.getContext(),32);
+            ViewUtils.setViewSize(mRvRoot,item_size,item_size);
+            ViewUtils.setViewSize(mIvItem,image_size,image_size);
 
         }
         public void bind(EditItem item,int position){
-            Log.d(TAG, "bind: ");
             mIvItem.setImageResource(item.imgRes);
             mTvItem.setText(item.text);
             mRvRoot.setTag(item);

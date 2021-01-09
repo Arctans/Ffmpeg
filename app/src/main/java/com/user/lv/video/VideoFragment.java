@@ -26,6 +26,7 @@ public class VideoFragment extends Fragment {
     private  EditItem editItem;
     private RecyclerView recyclerView;
     private List<EditItem> editItemList;
+    private EditItemAdapter mAdapter;
     public static Fragment newInstance(){
         Bundle args = new Bundle();
         VideoFragment fragment = new VideoFragment();
@@ -72,6 +73,8 @@ public class VideoFragment extends Fragment {
         recyclerView =view.findViewById(R.id.recycleView);
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(getContext(),3);
         recyclerView.setLayoutManager(mGridLayoutManager);
-        recyclerView.setAdapter(new EditItemAdapter(editItemList));
+        mAdapter = new EditItemAdapter(editItemList);
+        recyclerView.setAdapter(mAdapter);
+//        recyclerView.setOnClickListener();
     }
 }
