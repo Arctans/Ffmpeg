@@ -1,5 +1,6 @@
 package com.user.lv.video;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.user.lv.R;
+import com.user.lv.common.Click;
 import com.user.lv.edit.EditItem;
 import com.user.lv.edit.EditItemAdapter;
 
@@ -74,6 +76,14 @@ public class VideoFragment extends Fragment {
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(getContext(),3);
         recyclerView.setLayoutManager(mGridLayoutManager);
         mAdapter = new EditItemAdapter(editItemList);
+        mAdapter.setEditItemOnClickListener(new Click.OnObjectClickListener<EditItem>() {
+            @Override
+            public void onObjectClick(EditItem editItem) {
+//                Log.d(TAG, "onObjectClick: "+editItem.getClass());
+                Intent intent = new Intent(getContext(),editItem.activityClass);
+                startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(mAdapter);
 //        recyclerView.setOnClickListener();
     }

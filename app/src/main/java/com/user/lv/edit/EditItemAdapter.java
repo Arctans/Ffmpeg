@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.user.lv.R;
+import com.user.lv.common.Click;
 import com.user.lv.utils.DeviceUtils;
 import com.user.lv.utils.ViewUtils;
 
@@ -22,10 +23,14 @@ import androidx.recyclerview.widget.RecyclerView;
 public class EditItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements  View.OnClickListener{
     private static final String TAG = EditItemAdapter.class.getSimpleName();
     private List<EditItem> mEditItemList;
+    private Click.OnObjectClickListener<EditItem> OnObjectClickListener;
     public EditItemAdapter(List<EditItem> mList){
         mEditItemList = mList;
     }
 
+    public void setEditItemOnClickListener(Click.OnObjectClickListener<EditItem> onObjectClickListener){
+        this.OnObjectClickListener = onObjectClickListener;
+    }
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -37,6 +42,7 @@ public class EditItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         ItemViewHolder item;
+        Log.d(TAG, "onBindViewHolder: position "+position);
         if(holder instanceof  ItemViewHolder){
             item = (ItemViewHolder)holder;
             item.bind(mEditItemList.get(position),position);
@@ -52,6 +58,9 @@ public class EditItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public void onClick(View v) {
         Log.d(TAG, "onClick: id "+v.getId()+" Tag "+v.getTag());
+        if(v.getTag() instanceof EditItem){
+            OnObjectClickListener.onObjectClick((EditItem) v.getTag());
+        }
     }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder{
