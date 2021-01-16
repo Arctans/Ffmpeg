@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 
     private void changeFragment(int position) {
         ActionBar bar = getSupportActionBar();
+        Log.d(TAG, "changeFragment: "+bar);
         switch (position) {
             case 1:
 //                switchFragment(mAudioFragment, AudioFragment.TAG);
