@@ -27,6 +27,12 @@ public class VideoFlipActivity extends EditMediaListActivity {
         @Override
         protected void onMenuClick(int order) {
                 Log.d(TAG, "onMenuClick: "+order);
+                if(order == 0){
+                        if(mMediaFileList.size()==1){
+                                Log.d(TAG, "onMenuClick: hava selete video");
+                        }
+                        pickVideo();
+                }
         }
 
         @Override

@@ -7,6 +7,8 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.FileUtils;
 import android.provider.MediaStore;
 
 import android.text.TextUtils;
@@ -18,6 +20,7 @@ import android.widget.Toast;
 
 
 import com.user.lv.R;
+import com.user.lv.utils.FileUtil;
 
 import java.io.File;
 
@@ -46,6 +49,7 @@ public abstract class BaseEditActivity extends AppCompatActivity {
 
     protected abstract void onMenuClick(int order);
     protected abstract void createOptionsMenu(Menu menu);
+    protected abstract  int getEditTitle();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +78,22 @@ public abstract class BaseEditActivity extends AppCompatActivity {
             }
         });
         requestWritePermissions();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(isPickFileCode(requestCode) && resultCode == RESULT_OK){
+            Uri uri = null;
+            if(data != null) {
+                uri = data.getData();
+            }
+            if(uri != null){
+                Log.d(TAG, "onActivityResult: "+uri);
+                String path =  FileUtil.getFilePath(getApplicationContext(),uri);
+                Log.d(TAG, "onActivityResult: "+path);
+            }
+        }
     }
 
     @Override
@@ -107,5 +127,21 @@ public abstract class BaseEditActivity extends AppCompatActivity {
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE_Permission);
         }
     }
-    protected abstract  int getEditTitle();
+    private boolean isPickFileCode(int code){
+
+        return code == REQUEST_CODE_PICK_AUDIO
+                || code == REQUEST_CODE_PICK_VIDEO
+                || code == REQUEST_CODE_PICK_IMG;
+    }
+    private void pickMedia(final String filter, int code) {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.setType(filter);
+        startActivityForResult(Intent.createChooser(intent, "Select"), code);
+    }
+    protected void pickVideo(){
+        pickMedia("video/*", REQUEST_CODE_PICK_VIDEO);
+    }
+
+
 }
