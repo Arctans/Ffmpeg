@@ -14,4 +14,10 @@
     <string name="video">视频</string>
     <string name="music">音乐</string>
     <string name="about">关于</string>
+    <string name="write_permission">请打开文件读写权限</string>
+    <string name="Video_mirror">视频镜像</string>
+    <string name="seletc_video">旋转视频</string>
+    <string name="delete_video">删除视频</string>
+    <string name="upside_down">上下翻转</string>
+    <string name="flip_left_right">左右翻转</string>
 </resources>

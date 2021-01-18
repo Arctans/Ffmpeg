@@ -21,6 +21,7 @@ import com.user.lv.R;
 
 import java.io.File;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -44,7 +45,7 @@ public abstract class BaseEditActivity extends AppCompatActivity {
     private boolean mIsVideo;
 
     protected abstract void onMenuClick(int order);
-
+    protected abstract void createOptionsMenu(Menu menu);
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +57,7 @@ public abstract class BaseEditActivity extends AppCompatActivity {
         Log.d(TAG, "setContentView: ");
         mRoot = findViewById(R.id.root);
         mToolbar = findViewById(R.id.toolbar);
-        mToolbar.setTitle(getEditTitle());
+        mToolbar.setTitle(getResources().getString(getEditTitle()));
         mToolbar.setOverflowIcon(getDrawable(R.drawable.ic_more_horiz_white_24dp));
         setSupportActionBar(mToolbar);
         mToolbar.inflateMenu(R.menu.menu_toolbar);
@@ -74,9 +75,30 @@ public abstract class BaseEditActivity extends AppCompatActivity {
         });
         requestWritePermissions();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        menu.clear();
+        createOptionsMenu(menu);
+        return true;
+    }
+
     protected boolean hasWritePermissions() {
         int hasWritePermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         return hasWritePermission == PackageManager.PERMISSION_GRANTED;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_CODE_Permission:
+                if (!hasWritePermissions()) {
+                    Toast.makeText(this, R.string.write_permission, Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+                break;
+        }
     }
 
     private void requestWritePermissions() {
@@ -85,5 +107,5 @@ public abstract class BaseEditActivity extends AppCompatActivity {
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE_Permission);
         }
     }
-    protected abstract  String getEditTitle();
+    protected abstract  int getEditTitle();
 }

@@ -41,19 +41,19 @@ public class VideoFragment extends Fragment {
         Log.d(TAG, "onCreate: 0");
         editItemList = new ArrayList<EditItem>();
         editItemList.add(new EditItem(R.drawable.ic_trans_code_black_24dp,
-                            VideoFlipActivity.TITLE,VideoFlipActivity.class));
+                            getResources().getString(VideoFlipActivity.TITLE),VideoFlipActivity.class));
         editItemList.add(new EditItem(R.drawable.ic_video_puzz_black_24dp,
-                VideoFlipActivity.TITLE, VideoFlipActivity.class));
+                getResources().getString(VideoFlipActivity.TITLE), VideoFlipActivity.class));
         editItemList.add(new EditItem(R.drawable.ic_video_watermark_black_24dp,
-                VideoFlipActivity.TITLE, VideoFlipActivity.class));
+                getResources().getString(VideoFlipActivity.TITLE), VideoFlipActivity.class));
         editItemList.add(new EditItem(R.drawable.ic_un_logo_black_24dp,
-                VideoFlipActivity.TITLE, VideoFlipActivity.class));
+                getResources().getString(VideoFlipActivity.TITLE), VideoFlipActivity.class));
         editItemList.add(new EditItem(R.drawable.ic_demux_audio_black_24dp,
-                VideoFlipActivity.TITLE, VideoFlipActivity.class));
+                getResources().getString(VideoFlipActivity.TITLE), VideoFlipActivity.class));
         editItemList.add(new EditItem(R.drawable.ic_demux_video_black_24dp,
-                VideoFlipActivity.TITLE, VideoFlipActivity.class));
+                getResources().getString(VideoFlipActivity.TITLE), VideoFlipActivity.class));
         editItemList.add(new EditItem(R.drawable.ic_filter_black_24dp,
-                VideoFlipActivity.TITLE, VideoFlipActivity.class));
+                getResources().getString(VideoFlipActivity.TITLE), VideoFlipActivity.class));
   
         super.onCreate(savedInstanceState);
     }

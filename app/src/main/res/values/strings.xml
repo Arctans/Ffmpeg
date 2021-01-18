@@ -14,4 +14,10 @@
     <string name="video">video</string>
     <string name="music">music</string>
     <string name="about">about</string>
+    <string name="write_permission">Please open read and write permission</string>
+    <string name="Video_mirror">Video Mirror</string>
+    <string name="seletc_video">Select Video</string>
+    <string name="delete_video">Delete Video</string>
+    <string name="upside_down">Upside down</string>
+    <string name="flip_left_right">Flip left and right</string>
 </resources>

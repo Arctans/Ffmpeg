@@ -2,6 +2,7 @@ package com.user.lv.video;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 
 import com.user.lv.R;
@@ -11,20 +12,28 @@ import androidx.annotation.Nullable;
 
 
 /**
- * Created by wyh on 2019/3/20.
+ * Created by Arctab on 2021/01/18.
  */
 public class VideoFlipActivity extends EditMediaListActivity {
         public static String TAG = VideoFlipActivity.class.getSimpleName();
-        public static final String TITLE = "视频镜像";
+        public static final int TITLE = R.string.Video_mirror;
 
         @Override
-        protected String getEditTitle() {
+        protected int getEditTitle() {
                 return TITLE;
         }
-        private void createOptionMenu(Menu menu){
-                menu.add("选择视频");
-                menu.add("删除视频");
-                menu.add("上下翻转");
-                menu.add("左右翻转");
+
+
+        @Override
+        protected void onMenuClick(int order) {
+                Log.d(TAG, "onMenuClick: "+order);
+        }
+
+        @Override
+        protected void createOptionsMenu(Menu menu) {
+                menu.add(R.string.seletc_video);
+                menu.add(R.string.delete_video);
+                menu.add(R.string.upside_down);
+                menu.add(R.string.flip_left_right);
         }
 }
