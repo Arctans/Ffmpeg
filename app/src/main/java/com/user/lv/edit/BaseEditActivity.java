@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Toast;
 
 
+import com.user.lv.BuildConfig;
 import com.user.lv.R;
 import com.user.lv.utils.FileUtil;
 
@@ -29,6 +30,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.FileProvider;
 
 /**
  * Created by wyh on 2019/3/17.
@@ -91,8 +93,18 @@ public abstract class BaseEditActivity extends AppCompatActivity {
             if(uri != null){
                 Log.d(TAG, "onActivityResult: "+uri);
                 String path =  FileUtil.getFilePath(getApplicationContext(),uri);
-                Log.d(TAG, "onActivityResult: "+path);
+                if(path!=null){
+                    File file = new File(path);
+                    if(file.exists()){
+                        MediaFile mediaFile = new MediaFile();
+                        mediaFile.setName(file.getName());
+                        mediaFile.setPath(file.getPath());
+                        mediaFile.setType(requestCode);
+                        onPickFile(mediaFile);
+                    }
+                }
             }
+
         }
     }
 
@@ -142,6 +154,32 @@ public abstract class BaseEditActivity extends AppCompatActivity {
     protected void pickVideo(){
         pickMedia("video/*", REQUEST_CODE_PICK_VIDEO);
     }
+    protected void pickAudio(){
+        pickMedia("audio/*",REQUEST_CODE_PICK_AUDIO);
+    }
+    protected void pickImg(){
+        pickMedia("image/*",REQUEST_CODE_PICK_IMG);
+    }
+    protected void onPickFile(MediaFile mediaFile){
 
+    }
+    protected void onDeleteFile(MediaFile mediaFile){
 
+    }
+    protected void deleteLastMediaFile(){
+
+    }
+    protected void playVideo(String path) {
+        play(path, "video/*");
+    }
+
+    protected void play(String path, String filter) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        File file = new File(path);
+        Uri contentUri = FileProvider.getUriForFile(getApplicationContext(), BuildConfig.APPLICATION_ID + ".fileProvider", file);
+        intent.setDataAndType(contentUri, filter);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, contentUri);
+        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        startActivity(intent);
+    }
 }

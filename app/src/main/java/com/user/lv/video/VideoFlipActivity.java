@@ -32,6 +32,13 @@ public class VideoFlipActivity extends EditMediaListActivity {
                                 Log.d(TAG, "onMenuClick: hava selete video");
                         }
                         pickVideo();
+//                        pickAudio();
+                }else if(order == 1){
+                       deleteLastMediaFile();
+                }else if(order == 2){
+
+                }else if(order == 3){
+
                 }
         }
 
@@ -42,4 +49,5 @@ public class VideoFlipActivity extends EditMediaListActivity {
                 menu.add(R.string.upside_down);
                 menu.add(R.string.flip_left_right);
         }
+
 }
