@@ -41,9 +41,9 @@ public class VideoFlipActivity extends EditMediaListActivity {
                 }else if(order == 1){
                        deleteLastMediaFile();
                 }else if(order == 2){
-
+                        run(mMediaFileList,true);
                 }else if(order == 3){
-
+                        run(mMediaFileList,false);
                 }
         }
 
@@ -57,6 +57,8 @@ public class VideoFlipActivity extends EditMediaListActivity {
         private void run(List<MediaFile> mMediaFileList,Boolean isVertical){
                 final String output = FileUtil.OUTPUT_VIDEO_DIR + File.separator +
                         "flip_" + TAG + ".mp4";
+                showLoadingDialog();
+
 
         }
 }

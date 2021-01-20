@@ -16,7 +16,7 @@ public class FileUtil {
     private  static final String TAG = FileUtil.class.getSimpleName();
 
     public static final String ROOT_DIR = Environment.getExternalStorageDirectory().getPath() +
-            File.separator + "FFmpegCmd";
+            File.separator + "Arctan";
     public static final String OUTPUT_DIR = ROOT_DIR + File.separator + "Output";
     public static final String OUTPUT_AUDIO_DIR = OUTPUT_DIR + File.separator + "audio";
     public static final String OUTPUT_VIDEO_DIR = OUTPUT_DIR + File.separator + "video";

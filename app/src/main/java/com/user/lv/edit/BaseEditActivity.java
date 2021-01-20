@@ -21,10 +21,12 @@ import android.widget.Toast;
 
 import com.user.lv.BuildConfig;
 import com.user.lv.R;
+import com.user.lv.common.SecureProgressDialog;
 import com.user.lv.utils.FileUtil;
 
 import java.io.File;
 
+import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,11 +35,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 
 /**
- * Created by wyh on 2019/3/17.
+ * Created by Arctan on 20210120
  */
 public abstract class BaseEditActivity extends AppCompatActivity {
     private static final String TAG = BaseEditActivity.class.getSimpleName();
 
+    private SecureProgressDialog mProgressDialog;
     private static final int REQUEST_CODE_Permission = 1;
     protected static final int REQUEST_CODE_PICK_AUDIO = MediaFile.TYPE_AUDIO;
     protected static final int REQUEST_CODE_PICK_VIDEO = MediaFile.TYPE_VIDEO;
@@ -114,6 +117,28 @@ public abstract class BaseEditActivity extends AppCompatActivity {
         menu.clear();
         createOptionsMenu(menu);
         return true;
+    }
+    /**
+     * 初始化正在加载框
+     */
+    @MainThread
+    private void initLoadingDialog() {
+        if (mProgressDialog == null) {
+            mProgressDialog = new SecureProgressDialog(this);
+            mProgressDialog.setMessage("正在处理...");
+            mProgressDialog.setCanceledOnTouchOutside(false);
+        }
+    }
+    protected void showLoadingDialog(){
+        if(isFinishing() || isDestroyed()){
+            return ;
+        }else{
+            initLoadingDialog();
+            if(!mProgressDialog.isShowing()){
+                mProgressDialog.show();
+            }
+
+        }
     }
 
     protected boolean hasWritePermissions() {
