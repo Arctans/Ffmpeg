@@ -7,8 +7,13 @@ import android.view.Menu;
 
 import com.user.lv.R;
 import com.user.lv.edit.EditMediaListActivity;
+import com.user.lv.edit.MediaFile;
+import com.user.lv.utils.FileUtil;
 
 import androidx.annotation.Nullable;
+
+import java.io.File;
+import java.util.List;
 
 
 /**
@@ -49,5 +54,9 @@ public class VideoFlipActivity extends EditMediaListActivity {
                 menu.add(R.string.upside_down);
                 menu.add(R.string.flip_left_right);
         }
+        private void run(List<MediaFile> mMediaFileList,Boolean isVertical){
+                final String output = FileUtil.OUTPUT_VIDEO_DIR + File.separator +
+                        "flip_" + TAG + ".mp4";
 
+        }
 }

@@ -176,10 +176,12 @@ public abstract class BaseEditActivity extends AppCompatActivity {
     protected void play(String path, String filter) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         File file = new File(path);
-        Uri contentUri = FileProvider.getUriForFile(getApplicationContext(), BuildConfig.APPLICATION_ID + ".fileProvider", file);
-        intent.setDataAndType(contentUri, filter);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, contentUri);
-        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        startActivity(intent);
+        if(file.exists()){
+            Uri contentUri = FileProvider.getUriForFile(getApplicationContext(), BuildConfig.APPLICATION_ID + ".fileProvider", file);
+            intent.setDataAndType(contentUri, filter);
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, contentUri);
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+            startActivity(intent);
+        }
     }
 }
