@@ -20,4 +20,6 @@
     <string name="delete_video">Delete Video</string>
     <string name="upside_down">Upside down</string>
     <string name="flip_left_right">Flip left and right</string>
+    <string name="mix_fail">Mixture fail</string>
+    <string name="has_selected_video">Have Select Video</string>
 </resources>

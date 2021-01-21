@@ -20,4 +20,6 @@
     <string name="delete_video">删除视频</string>
     <string name="upside_down">上下翻转</string>
     <string name="flip_left_right">左右翻转</string>
+    <string name="mix_fail">合成失败</string>
+    <string name="has_selected_video">已经选择了视频</string>
 </resources>

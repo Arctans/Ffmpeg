@@ -5,9 +5,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.user.lv.R;
+import com.user.lv.common.SnackBarUtil;
 import com.user.lv.edit.EditMediaListActivity;
 import com.user.lv.edit.MediaFile;
+import com.user.lv.ffmpeg.Callback;
+import com.user.lv.ffmpeg.FFmpegVideo;
 import com.user.lv.utils.FileUtil;
 
 import androidx.annotation.Nullable;
@@ -34,7 +38,8 @@ public class VideoFlipActivity extends EditMediaListActivity {
                 Log.d(TAG, "onMenuClick: "+order);
                 if(order == 0){
                         if(mMediaFileList.size()==1){
-                                Log.d(TAG, "onMenuClick: hava selete video");
+//                                Log.d(TAG, "onMenuClick: hava selete video");
+                                SnackBarUtil.showError(mRoot,getString(R.string.has_selected_video));
                         }
                         pickVideo();
 //                        pickAudio();
@@ -58,6 +63,24 @@ public class VideoFlipActivity extends EditMediaListActivity {
                 final String output = FileUtil.OUTPUT_VIDEO_DIR + File.separator +
                         "flip_" + TAG + ".mp4";
                 showLoadingDialog();
+                FFmpegVideo.flipVideo(mMediaFileList.get(0).getPath(), output, isVertical, new Callback() {
+                        @Override
+                        public void onLog(String log) {
+
+                        }
+
+                        @Override
+                        public void onSuccess() {
+                                dismissLoadingDialog();
+                                showSaveDoneAndPlayDialog(output,true);
+                        }
+
+                        @Override
+                        public void onFail() {
+                                dismissLoadingDialog();
+                                SnackBarUtil.showError(mRoot,getString(R.string.mix_fail));
+                        }
+                });
 
 
         }

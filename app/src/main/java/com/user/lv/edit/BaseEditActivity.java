@@ -140,6 +140,24 @@ public abstract class BaseEditActivity extends AppCompatActivity {
 
         }
     }
+    /**
+     * 隐藏正在加载框
+     */
+    @MainThread
+    protected void dismissLoadingDialog() {
+        if (isFinishing() || isDestroyed()) {
+            return;
+        }
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+            mProgressDialog.dismiss();
+        }
+    }
+    protected void showSaveDoneAndPlayDialog(final String outputAudio, final boolean video) {
+        if (isFinishing() || isDestroyed()) {
+            return;
+        }
+
+    }
 
     protected boolean hasWritePermissions() {
         int hasWritePermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
