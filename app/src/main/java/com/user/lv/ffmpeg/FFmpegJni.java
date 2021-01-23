@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 
 public class FFmpegJni {
 
-    public static native int execute(@NonNull String[] cmd);
+    static {
+            System.loadLibrary("ffmpeg_jni");
+    }
+    public static native int execute(String[] commands);
     public static native String getLog();
-
 }

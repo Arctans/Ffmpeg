@@ -1,0 +1,42 @@
+{
+  "stringTable": {
+    "0": "D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/debug/arm64-v8a",
+    "1": "--target=aarch64-none-linux-android24 --gcc-toolchain=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffmpeg_jni_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC"
+  },
+  "buildFiles": [
+    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
+    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\build\\cmake\\platforms.cmake",
+    "D:\\Arctan\\workspace\\Androidwork\\lv\\app\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\" clean"
+  ],
+  "buildTargetsCommand": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "ffmpeg_jni-Debug-arm64-v8a": {
+      "buildCommand": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\" ffmpeg_jni",
+      "buildType": "debug",
+      "toolchain": "3829565470",
+      "abi": "arm64-v8a",
+      "artifactName": "ffmpeg_jni",
+      "files": [
+        {
+          "src": "D:\\Arctan\\workspace\\Androidwork\\lv\\app\\src\\main\\cpp\\ffmpeg_jni.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "D:\\Arctan\\workspace\\Androidwork\\lv\\libs\\arm64-v8a\\libffmpeg_jni.so"
+    }
+  },
+  "toolchains": {
+    "3829565470": {
+      "cppCompilerExecutable": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

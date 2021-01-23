@@ -1,5 +1,6 @@
 package com.user.lv.ffmpeg;
 
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,7 +14,7 @@ import java.util.List;
 
 enum  FFmpeg {
     ffmpeg;
-
+    private static final String TAG = FFmpeg.class.getSimpleName();
     private Callback mCallBack;
     private volatile boolean mIsRunning = false;
 

@@ -1,0 +1,19 @@
+{
+  "buildFiles": [
+    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
+    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\build\\cmake\\platforms.cmake",
+    "D:\\Arctan\\workspace\\Androidwork\\lv\\app\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\release\\x86\" clean"
+  ],
+  "buildTargetsCommand": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\release\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "ffmpeg_jni-Release-x86": {
+      "artifactName": "ffmpeg_jni",
+      "buildCommand": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\release\\x86\" ffmpeg_jni",
+      "abi": "x86",
+      "output": "D:\\Arctan\\workspace\\Androidwork\\lv\\libs\\x86\\libffmpeg_jni.so"
+    }
+  }
+}

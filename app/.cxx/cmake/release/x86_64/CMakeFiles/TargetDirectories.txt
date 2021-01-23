@@ -1,0 +1,3 @@
+D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/release/x86_64/CMakeFiles/edit_cache.dir
+D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/release/x86_64/CMakeFiles/ffmpeg_jni.dir
+D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir
