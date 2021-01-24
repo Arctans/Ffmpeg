@@ -1,3 +1,3 @@
-D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
-D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/ffmpeg_jni.dir
-D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/workspace/Learn/Android/Ffmpeg/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/workspace/Learn/Android/Ffmpeg/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/ffmpeg_jni.dir
+D:/workspace/Learn/Android/Ffmpeg/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir

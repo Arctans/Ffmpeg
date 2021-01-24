@@ -13,8 +13,23 @@ android {
 
         externalNativeBuild {
             cmake {
-                cppFlags ""
+                cppFlags " -O3 -Wall -pipe " +
+                        " -ffast-math -fPIC" +
+                        " -fstrict-aliasing -Werror=strict-aliasing" +
+                        " -Wa,--noexecstack " +
+                        " -DANDROID -DNDEBUG"
                 abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+
+                cFlags " -O3 -Wall -pipe " +
+                        " -ffast-math -fPIC" +
+                        " -fstrict-aliasing -Werror=strict-aliasing" +
+                        " -Wa,--noexecstack " +
+                        " -DANDROID -DNDEBUG"
+
+                arguments "-DANDROID_PIE=OFF",
+                        "-DANDROID_ARM_NEON=TRUE",
+                        "-DANDROID_PLATFORM=android-14"
+
             }
         }
 
@@ -33,6 +48,7 @@ android {
     }
     sourceSets {
         main {
+            jniLibs.srcDirs 'libs/armeabi-v7a'
             java.srcDirs = ['src/main/java', 'src/main/java/common/include'] 
             jni.srcDirs =['src/main/jni', 'src/main/cpp/include']
 } }

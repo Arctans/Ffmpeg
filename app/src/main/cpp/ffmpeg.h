@@ -620,7 +620,7 @@ extern char *qsv_device;
 #endif
 extern HWDevice *filter_hw_device;
 
-
+int main(int argc, char **argv);
 void term_init(void);
 void term_exit(void);
 

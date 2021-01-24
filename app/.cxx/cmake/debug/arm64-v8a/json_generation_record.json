@@ -9,31 +9,23 @@
   },
   {
     "level": "INFO",
-    "message": "rebuilding JSON D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\\android_gradle_build.json due to:"
+    "message": "rebuilding JSON D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\debug\\arm64-v8a\\android_gradle_build.json due to:"
   },
   {
     "level": "INFO",
-    "message": "- expected json D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\\android_gradle_build.json file is not present, will remove stale json folder"
+    "message": "- a dependent build file changed"
   },
   {
     "level": "INFO",
-    "message": "- missing previous command file D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\\build_command.txt, will remove stale json folder"
+    "message": "  - D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\CMakeLists.txt"
   },
   {
     "level": "INFO",
-    "message": "- command changed from previous, will remove stale json folder"
+    "message": "keeping json folder \u0027D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\debug\\arm64-v8a\u0027 but regenerating project"
   },
   {
     "level": "INFO",
-    "message": "removing stale contents from \u0027D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\u0027"
-  },
-  {
-    "level": "INFO",
-    "message": "created folder \u0027D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\u0027"
-  },
-  {
-    "level": "INFO",
-    "message": "executing cmake Executable : D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe\narguments : \n-HD:\\Arctan\\workspace\\Androidwork\\lv\\app\n-BD:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_PLATFORM\u003dandroid-24\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dD:\\Arctan\\workspace\\Androidwork\\lv\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003dD:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\n-DCMAKE_CXX_FLAGS\u003d\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a\n-DCMAKE_SYSTEM_VERSION\u003d24\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_ANDROID_NDK\u003dD:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\n-DCMAKE_TOOLCHAIN_FILE\u003dD:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake\n-G Ninja\n-DCMAKE_MAKE_PROGRAM\u003dD:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe\njvmArgs : \n\n"
+    "message": "executing cmake Executable : D:\\worksoftware\\AndroidSDK\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe\narguments : \n-HD:\\workspace\\Learn\\Android\\Ffmpeg\\app\n-BD:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\debug\\arm64-v8a\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_PLATFORM\u003dandroid-24\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dD:\\workspace\\Learn\\Android\\Ffmpeg\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DANDROID_NDK\u003dD:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\n-DCMAKE_C_FLAGS\u003d -O3 -Wall -pipe  -ffast-math -fPIC -fstrict-aliasing -Werror\u003dstrict-aliasing -Wa,--noexecstack  -DANDROID -DNDEBUG\n-DCMAKE_CXX_FLAGS\u003d -O3 -Wall -pipe  -ffast-math -fPIC -fstrict-aliasing -Werror\u003dstrict-aliasing -Wa,--noexecstack  -DANDROID -DNDEBUG\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a\n-DCMAKE_SYSTEM_VERSION\u003d24\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_ANDROID_NDK\u003dD:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\n-DCMAKE_TOOLCHAIN_FILE\u003dD:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake\n-G Ninja\n-DCMAKE_MAKE_PROGRAM\u003dD:\\worksoftware\\AndroidSDK\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe\n-DANDROID_PIE\u003dOFF\n-DANDROID_ARM_NEON\u003dTRUE\n-DANDROID_PLATFORM\u003dandroid-14\njvmArgs : \n\n"
   },
   {
     "level": "INFO",
@@ -41,11 +33,11 @@
   },
   {
     "level": "INFO",
-    "message": "write build output D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\\build_output.txt"
+    "message": "write build output D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\debug\\arm64-v8a\\build_output.txt"
   },
   {
     "level": "INFO",
-    "message": "write command file D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\debug\\arm64-v8a\\build_command.txt"
+    "message": "write command file D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\debug\\arm64-v8a\\build_command.txt"
   },
   {
     "level": "INFO",

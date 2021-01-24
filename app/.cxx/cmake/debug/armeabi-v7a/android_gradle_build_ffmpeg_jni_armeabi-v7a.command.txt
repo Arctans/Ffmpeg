@@ -1,7 +1,7 @@
-Executable : D:\Arctan\worksoftware\AndroidStudioSDK\cmake\3.10.2.4988404\bin\ninja.exe
+Executable : D:\worksoftware\AndroidSDK\sdk\cmake\3.10.2.4988404\bin\ninja.exe
 arguments : 
 -C
-D:\Arctan\workspace\Androidwork\lv\app\.cxx\cmake\debug\armeabi-v7a
+D:\workspace\Learn\Android\Ffmpeg\app\.cxx\cmake\debug\armeabi-v7a
 ffmpeg_jni
 jvmArgs : 
 

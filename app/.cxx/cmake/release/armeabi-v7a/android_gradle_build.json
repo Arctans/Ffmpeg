@@ -1,41 +1,50 @@
 {
   "stringTable": {
-    "0": "D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/release/armeabi-v7a",
-    "1": "--target=armv7-none-linux-androideabi24 --gcc-toolchain=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffmpeg_jni_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Oz -DNDEBUG -fPIC"
+    "0": "D:/workspace/Learn/Android/Ffmpeg/app/.cxx/cmake/release/armeabi-v7a",
+    "1": "--target=armv7-none-linux-androideabi16 --gcc-toolchain=D:/worksoftware/AndroidSDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/worksoftware/AndroidSDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffmpeg_jni_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -O3 -Wall -pipe -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack -DANDROID -DNDEBUG -stdlib=libc++ -std=c++11 -fPIC -w -Oz -DNDEBUG -fPIC",
+    "2": "--target=armv7-none-linux-androideabi16 --gcc-toolchain=D:/worksoftware/AndroidSDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/worksoftware/AndroidSDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffmpeg_jni_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -O3 -Wall -pipe -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack -DANDROID -DNDEBUG -Oz -DNDEBUG -fPIC"
   },
   "buildFiles": [
-    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
-    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\build\\cmake\\platforms.cmake",
-    "D:\\Arctan\\workspace\\Androidwork\\lv\\app\\CMakeLists.txt"
+    "D:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\\build\\cmake\\platforms.cmake",
+    "D:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
+    "D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\release\\armeabi-v7a\" clean"
+    "D:\\worksoftware\\AndroidSDK\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\release\\armeabi-v7a\" clean"
   ],
-  "buildTargetsCommand": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\release\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "D:\\worksoftware\\AndroidSDK\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\release\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "ffmpeg_jni-Release-armeabi-v7a": {
-      "buildCommand": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\release\\armeabi-v7a\" ffmpeg_jni",
+      "buildCommand": "D:\\worksoftware\\AndroidSDK\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\release\\armeabi-v7a\" ffmpeg_jni",
       "buildType": "release",
-      "toolchain": "3829565470",
+      "toolchain": "3189028954",
       "abi": "armeabi-v7a",
       "artifactName": "ffmpeg_jni",
       "files": [
         {
-          "src": "D:\\Arctan\\workspace\\Androidwork\\lv\\app\\src\\main\\cpp\\ffmpeg_jni.cpp",
+          "src": "D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\src\\main\\cpp\\ffmpeg_jni.cpp",
           "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\src\\main\\cpp\\ffmpeg.c",
+          "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "D:\\Arctan\\workspace\\Androidwork\\lv\\libs\\armeabi-v7a\\libffmpeg_jni.so"
+      "output": "D:\\workspace\\Learn\\Android\\Ffmpeg\\libs\\armeabi-v7a\\libffmpeg_jni.so"
     }
   },
   "toolchains": {
-    "3829565470": {
-      "cppCompilerExecutable": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    "3189028954": {
+      "cCompilerExecutable": "D:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "D:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
     }
   },
-  "cFileExtensions": [],
+  "cFileExtensions": [
+    "c"
+  ],
   "cppFileExtensions": [
     "cpp"
   ]

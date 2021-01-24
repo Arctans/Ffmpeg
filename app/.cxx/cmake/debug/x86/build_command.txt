@@ -1,20 +1,24 @@
-Executable : D:\Arctan\worksoftware\AndroidStudioSDK\cmake\3.10.2.4988404\bin\cmake.exe
+Executable : D:\worksoftware\AndroidSDK\sdk\cmake\3.10.2.4988404\bin\cmake.exe
 arguments : 
--HD:\Arctan\workspace\Androidwork\lv\app
--BD:\Arctan\workspace\Androidwork\lv\app\.cxx\cmake\debug\x86
+-HD:\workspace\Learn\Android\Ffmpeg\app
+-BD:\workspace\Learn\Android\Ffmpeg\app\.cxx\cmake\debug\x86
 -DANDROID_ABI=x86
 -DANDROID_PLATFORM=android-24
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\Arctan\workspace\Androidwork\lv\app\build\intermediates\cmake\debug\obj\x86
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\workspace\Learn\Android\Ffmpeg\app\build\intermediates\cmake\debug\obj\x86
 -DCMAKE_BUILD_TYPE=Debug
--DANDROID_NDK=D:\Arctan\worksoftware\AndroidStudioSDK\ndk\21.1.6352462
--DCMAKE_CXX_FLAGS=
+-DANDROID_NDK=D:\worksoftware\AndroidSDK\sdk\ndk\21.1.6352462
+-DCMAKE_C_FLAGS= -O3 -Wall -pipe  -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack  -DANDROID -DNDEBUG
+-DCMAKE_CXX_FLAGS= -O3 -Wall -pipe  -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack  -DANDROID -DNDEBUG
 -DCMAKE_SYSTEM_NAME=Android
 -DCMAKE_ANDROID_ARCH_ABI=x86
 -DCMAKE_SYSTEM_VERSION=24
 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
--DCMAKE_ANDROID_NDK=D:\Arctan\worksoftware\AndroidStudioSDK\ndk\21.1.6352462
--DCMAKE_TOOLCHAIN_FILE=D:\Arctan\worksoftware\AndroidStudioSDK\ndk\21.1.6352462\build\cmake\android.toolchain.cmake
+-DCMAKE_ANDROID_NDK=D:\worksoftware\AndroidSDK\sdk\ndk\21.1.6352462
+-DCMAKE_TOOLCHAIN_FILE=D:\worksoftware\AndroidSDK\sdk\ndk\21.1.6352462\build\cmake\android.toolchain.cmake
 -G Ninja
--DCMAKE_MAKE_PROGRAM=D:\Arctan\worksoftware\AndroidStudioSDK\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_MAKE_PROGRAM=D:\worksoftware\AndroidSDK\sdk\cmake\3.10.2.4988404\bin\ninja.exe
+-DANDROID_PIE=OFF
+-DANDROID_ARM_NEON=TRUE
+-DANDROID_PLATFORM=android-14
 jvmArgs : 
 

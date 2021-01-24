@@ -4,7 +4,12 @@
 
 #include <jni.h>
 #include <string>
+#include <string.h>
 #include "android_log.h"
+
+extern "C"{
+    #include "ffmpeg.h"
+}
 
 
 
@@ -33,8 +38,8 @@ Java_com_user_lv_ffmpeg_FFmpegJni_execute(JNIEnv *env, jclass type, jobjectArray
         auto js = (jstring) env->GetObjectArrayElement(commands, i);
         argv[i] = (char *) env->GetStringUTFChars(js, 0);
     }
-    LOGD("----------begin---------");
-  //  return main(argc, argv);
+    LOGD("Arctan ----------begin---------");
+    return main(argc, argv);
 }
 
 extern "C"
