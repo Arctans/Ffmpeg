@@ -1,5 +1,7 @@
 package com.user.lv.ffmpeg;
 
+import android.view.Surface;
+
 import androidx.annotation.NonNull;
 
 public class FFmpegJni {
@@ -9,4 +11,5 @@ public class FFmpegJni {
     }
     public static native int execute(String[] commands);
     public static native String getLog();
+    public static native void playVideo(String videoPath, Surface surface);
 }

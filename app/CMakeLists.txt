@@ -1,150 +1,76 @@
-# For more information about using CMake with Android Studio, read the
-# documentation: https://d.android.com/studio/projects/add-native-code.html
-
-# Sets the minimum version of CMake required to build the native library.
-
 cmake_minimum_required(VERSION 3.4.1)
 
+find_library(log-lib log)
+find_library(android-lib android)
 
-
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/../libs/${ANDROID_ABI})
-# Creates and names a library, sets it as either STATIC
-# or SHARED, and provides the relative paths to its source code.
-# You can define multiple libraries, and CMake builds them for you.
-# Gradle automatically packages shared libraries with your APK.
-
-
-
-
-
-set(distribution_DIR ${CMAKE_SOURCE_DIR}/libs/)
-add_library( avcodec-58
+add_library(ffmpeg_jni
         SHARED
-        IMPORTED)
-set_target_properties( avcodec-58
+        src/main/cpp/ffmpeg_jni.cpp
+        #src/main/cpp/ffmpeg.c
+        )
+
+set(JNI_LIBS_DIR ${CMAKE_SOURCE_DIR}/libs)
+
+add_library(avutil
+        SHARED
+        IMPORTED )
+set_target_properties(avutil
         PROPERTIES IMPORTED_LOCATION
-        ${distribution_DIR}/armeabi-v7a/libavcodec-58.so)
+        ${JNI_LIBS_DIR}/${ANDROID_ABI}/libavutil.so )
 
-add_library( avfilter-7
+#add_library(avresample
+#        SHARED
+#        IMPORTED )
+#set_target_properties(avresample
+#        PROPERTIES IMPORTED_LOCATION
+#        ${JNI_LIBS_DIR}/${ANDROID_ABI}/libavresample.so )
+
+add_library(swresample
         SHARED
-        IMPORTED)
-set_target_properties( avfilter-7
+        IMPORTED )
+set_target_properties(swresample
         PROPERTIES IMPORTED_LOCATION
-        ${distribution_DIR}/armeabi-v7a/libavfilter-7.so)
+        ${JNI_LIBS_DIR}/${ANDROID_ABI}/libswresample.so )
 
-add_library( avformat-58
+add_library(swscale
         SHARED
-        IMPORTED)
-set_target_properties( avformat-58
+        IMPORTED )
+set_target_properties(swscale
         PROPERTIES IMPORTED_LOCATION
-        ${distribution_DIR}/armeabi-v7a/libavformat-58s.so)
+        ${JNI_LIBS_DIR}/${ANDROID_ABI}/libswscale.so )
 
-add_library( avutil-56
+add_library(avcodec
         SHARED
-        IMPORTED)
-set_target_properties( avutil-56
+        IMPORTED )
+set_target_properties(avcodec
         PROPERTIES IMPORTED_LOCATION
-        ${distribution_DIR}/armeabi-v7a/libavutil-56.so)
+        ${JNI_LIBS_DIR}/${ANDROID_ABI}/libavcodec.so )
 
-add_library( swresample-3
+add_library(avformat
         SHARED
-        IMPORTED)
-set_target_properties( swresample-3
+        IMPORTED )
+set_target_properties(avformat
         PROPERTIES IMPORTED_LOCATION
-        ${distribution_DIR}/armeabi-v7a/libswresample-3.so)
+        ${JNI_LIBS_DIR}/${ANDROID_ABI}/libavformat.so )
 
-add_library( swscale-5
+add_library(avfilter
         SHARED
-        IMPORTED)
-set_target_properties( swscale-5
+        IMPORTED )
+set_target_properties(avfilter
         PROPERTIES IMPORTED_LOCATION
-        ${distribution_DIR}/armeabi-v7a/libswscale-5.so)
+        ${JNI_LIBS_DIR}/${ANDROID_ABI}/libavfilter.so )
 
-
-set(source_files_dir ${CMAKE_SOURCE_DIR}/src/main/cpp)
-
-set(source_files
-        ${source_files_dir}/ffmpeg_jni.cpp
-        ${source_files_dir}/ffmpeg.c
-#        ${source_files_dir}/cmdutils.c
-        )
-
-set(link_lib
-        log
-        android
-        m
-        )
-
-add_library(libffmpeg SHARED IMPORTED)
-set_target_properties(libffmpeg PROPERTIES IMPORTED_LOCATION
-        ${ffmpeg_output_shared_lib}/libffmpeg.so)
-
-
-
-#初步生成的ffmpeg动态库地址
-set(ffmpeg_output_shared_lib
-        ${CMAKE_SOURCE_DIR}/libs/armeabi-v7a/
-        CACHE INTERNAL "ffmpeg_output_shared_lib_dir"
-        )
-#初步生成的ffmpeg头文件
-set(ffmpeg_output_include_dir
-        ${CMAKE_SOURCE_DIR}/src/cpp/include
-        CACHE INTERNAL "ffmpeg_output_include_dir"
-        )
-
-set(include_dir
-        ${CMAKE_SOURCE_DIR}/src/main/cpp/include/
-        )
-
-include_directories(${include_dir})
-
-set(link_lib
-        ${link_lib}
-        libffmpeg
-        )
-
-add_library( # Sets the name of the library.
-        ffmpeg_jni
-
-        # Sets the library as a shared library.
+add_library(avdevice
         SHARED
+        IMPORTED )
+set_target_properties(avdevice
+        PROPERTIES IMPORTED_LOCATION
+        ${JNI_LIBS_DIR}/${ANDROID_ABI}/libavdevice.so )
 
-        # Provides a relative path to your source file(s).
-        ${source_files}
-        )
 
 
-# Searches for a specified prebuilt library and stores the path as a
-# variable. Because CMake includes system libraries in the search path by
-# default, you only need to specify the name of the public NDK library
-# you want to add. CMake verifies that the library exists before
-# completing its build.
+include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/include/)
 
-find_library( # Sets the name of the path variable.
-        log-lib
-
-        # Specifies the name of the NDK library that
-        # you want CMake to locate.
-        log)
-
-set(CMAKE_C_FLAGS_DEBUG "${cmake_c_flag_debug} -s")
-set(CMAKE_CXX_FLAGS_DEBUG "${cmake_cxx_flag_debug} -s")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -std=c++11 -fPIC -w")
-
-# Specifies libraries CMake should link to your target library. You
-# can link multiple libraries, such as libraries you define in this
-# build script, prebuilt third-party libraries, or system libraries.
-
-target_link_libraries( # Specifies the target library.
-        ffmpeg_jni
- #       native-lib
- #       avcodec-58
- #       avfilter-7
- #       avformat-58
- #       avutil-56
- #       swresample-3
- #       swscale-5
-        # Links the target library to the log library
-        # included in the NDK.
-
-        ${log-lib})
+target_link_libraries(ffmpeg_jni
+        avutil  swresample swscale avcodec avformat avfilter avdevice
+        ${log-lib} ${android-lib} )

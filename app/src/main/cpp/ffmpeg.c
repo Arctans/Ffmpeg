@@ -40,6 +40,7 @@
 #include <unistd.h>
 #endif
 
+extern "C"{
 #include "libavformat/avformat.h"
 #include "libavdevice/avdevice.h"
 #include "libswresample/swresample.h"
@@ -66,9 +67,11 @@
 #include "libavcodec/mathops.h"
 #include "libavformat/os_support.h"
 
-# include "libavfilter/avfilter.h"
-# include "libavfilter/buffersrc.h"
-# include "libavfilter/buffersink.h"
+#include "libavfilter/avfilter.h"
+#include "libavfilter/buffersrc.h"
+#include "libavfilter/buffersink.h"
+}
+
 
 #if HAVE_SYS_RESOURCE_H
 #include <sys/time.h>
@@ -102,10 +105,7 @@
 #include <time.h>
 
 
-#include "ffmpeg.h"
-#include "cmdutils.h"
 
-#include "libavutil/avassert.h"
 
 const char program_name[] = "ffmpeg";
 const int program_birth_year = 2000;

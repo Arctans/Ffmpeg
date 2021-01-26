@@ -1,45 +1,45 @@
 {
   "stringTable": {
-    "0": "D:/workspace/Learn/Android/Ffmpeg/app/.cxx/cmake/release/x86_64",
-    "1": "--target=x86_64-none-linux-android21 --gcc-toolchain=D:/worksoftware/AndroidSDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/worksoftware/AndroidSDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffmpeg_jni_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O3 -Wall -pipe -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack -DANDROID -DNDEBUG -stdlib=libc++ -std=c++11 -fPIC -w -O2 -DNDEBUG -fPIC",
-    "2": "--target=x86_64-none-linux-android21 --gcc-toolchain=D:/worksoftware/AndroidSDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/worksoftware/AndroidSDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffmpeg_jni_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O3 -Wall -pipe -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack -DANDROID -DNDEBUG -O2 -DNDEBUG -fPIC"
+    "0": "D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/release/x86_64",
+    "1": "--target=x86_64-none-linux-android21 --gcc-toolchain=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffmpeg_jni_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O3 -Wall -pipe -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack -DANDROID -DNDEBUG -stdlib=libc++ -std=c++11 -fPIC -w -O2 -DNDEBUG -fPIC",
+    "2": "--target=x86_64-none-linux-android21 --gcc-toolchain=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffmpeg_jni_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O3 -Wall -pipe -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack -DANDROID -DNDEBUG -O2 -DNDEBUG -fPIC"
   },
   "buildFiles": [
-    "D:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\\build\\cmake\\platforms.cmake",
-    "D:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
-    "D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\CMakeLists.txt"
+    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
+    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\build\\cmake\\platforms.cmake",
+    "D:\\Arctan\\workspace\\Androidwork\\lv\\app\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "D:\\worksoftware\\AndroidSDK\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\release\\x86_64\" clean"
+    "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\release\\x86_64\" clean"
   ],
-  "buildTargetsCommand": "D:\\worksoftware\\AndroidSDK\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\release\\x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\release\\x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "ffmpeg_jni-Release-x86_64": {
-      "buildCommand": "D:\\worksoftware\\AndroidSDK\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\.cxx\\cmake\\release\\x86_64\" ffmpeg_jni",
+      "buildCommand": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"D:\\Arctan\\workspace\\Androidwork\\lv\\app\\.cxx\\cmake\\release\\x86_64\" ffmpeg_jni",
       "buildType": "release",
-      "toolchain": "3189028954",
+      "toolchain": "3410957824",
       "abi": "x86_64",
       "artifactName": "ffmpeg_jni",
       "files": [
         {
-          "src": "D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\src\\main\\cpp\\ffmpeg_jni.cpp",
+          "src": "D:\\Arctan\\workspace\\Androidwork\\lv\\app\\src\\main\\cpp\\ffmpeg_jni.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\src\\main\\cpp\\ffmpeg.c",
+          "src": "D:\\Arctan\\workspace\\Androidwork\\lv\\app\\src\\main\\cpp\\ffmpeg.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "D:\\workspace\\Learn\\Android\\Ffmpeg\\libs\\x86_64\\libffmpeg_jni.so"
+      "output": "D:\\Arctan\\workspace\\Androidwork\\lv\\libs\\x86_64\\libffmpeg_jni.so"
     }
   },
   "toolchains": {
-    "3189028954": {
-      "cCompilerExecutable": "D:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
-      "cppCompilerExecutable": "D:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    "3410957824": {
+      "cCompilerExecutable": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
     }
   },
   "cFileExtensions": [
