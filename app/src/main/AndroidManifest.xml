@@ -27,6 +27,15 @@
         <activity android:name=".video.VideoFlipActivity">
 
         </activity>
+
+        <activity android:name=".video.VideoPlayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.FFPLAYER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
         <provider
             android:authorities="${applicationId}.fileProvider"
             android:name="androidx.core.content.FileProvider"

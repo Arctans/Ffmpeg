@@ -1,13 +1,7 @@
 [
 {
-  "directory": "D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/release/x86_64",
-  "command": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android21 --gcc-toolchain=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffmpeg_jni_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -Wall -pipe  -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack  -DANDROID -DNDEBUG -stdlib=libc++ -std=c++11 -fPIC -w -O2 -DNDEBUG  -fPIC   -o CMakeFiles\\ffmpeg_jni.dir\\src\\main\\cpp\\ffmpeg_jni.cpp.o -c D:\\Arctan\\workspace\\Androidwork\\lv\\app\\src\\main\\cpp\\ffmpeg_jni.cpp",
-  "file": "D:/Arctan/workspace/Androidwork/lv/app/src/main/cpp/ffmpeg_jni.cpp"
-},
-
-{
-  "directory": "D:/Arctan/workspace/Androidwork/lv/app/.cxx/cmake/release/x86_64",
-  "command": "D:\\Arctan\\worksoftware\\AndroidStudioSDK\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=x86_64-none-linux-android21 --gcc-toolchain=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/Arctan/worksoftware/AndroidStudioSDK/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffmpeg_jni_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O3 -Wall -pipe  -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack  -DANDROID -DNDEBUG -O2 -DNDEBUG  -fPIC   -o CMakeFiles\\ffmpeg_jni.dir\\src\\main\\cpp\\ffmpeg.c.o   -c D:\\Arctan\\workspace\\Androidwork\\lv\\app\\src\\main\\cpp\\ffmpeg.c",
-  "file": "D:/Arctan/workspace/Androidwork/lv/app/src/main/cpp/ffmpeg.c"
+  "directory": "D:/workspace/Learn/Android/Ffmpeg/app/.cxx/cmake/release/x86_64",
+  "command": "D:\\worksoftware\\AndroidSDK\\sdk\\ndk\\21.1.6352462\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android21 --gcc-toolchain=D:/worksoftware/AndroidSDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=D:/worksoftware/AndroidSDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffmpeg_jni_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O3 -Wall -pipe  -ffast-math -fPIC -fstrict-aliasing -Werror=strict-aliasing -Wa,--noexecstack  -DANDROID -DNDEBUG -O2 -DNDEBUG  -fPIC   -o CMakeFiles\\ffmpeg_jni.dir\\src\\main\\cpp\\ffmpeg_jni.cpp.o -c D:\\workspace\\Learn\\Android\\Ffmpeg\\app\\src\\main\\cpp\\ffmpeg_jni.cpp",
+  "file": "D:/workspace/Learn/Android/Ffmpeg/app/src/main/cpp/ffmpeg_jni.cpp"
 }
 ]

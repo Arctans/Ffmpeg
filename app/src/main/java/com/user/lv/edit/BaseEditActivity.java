@@ -213,7 +213,8 @@ public abstract class BaseEditActivity extends AppCompatActivity {
 
     }
     protected void playVideo(String path) {
-        play(path, "video/*");
+//        play(path, "video/*");
+        play(path);
     }
 
     protected void play(String path, String filter) {
@@ -226,5 +227,10 @@ public abstract class BaseEditActivity extends AppCompatActivity {
             intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
             startActivity(intent);
         }
+    }
+    protected void play(String path){
+        Intent intent = new Intent("android.intent.action.FFPLAYER");
+        intent.putExtra("path",path);
+        startActivity(intent);
     }
 }
