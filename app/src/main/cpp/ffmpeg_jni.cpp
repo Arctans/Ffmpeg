@@ -10,9 +10,11 @@
 
 #include "android_log.h"
 
+
+
 //
 extern "C"{
-
+    #include "ffmpeg.h"
     #include <libavcodec/avcodec.h>
     #include <libavformat/avformat.h>
     #include <libavfilter/avfilter.h>
@@ -55,9 +57,10 @@ Java_com_user_lv_ffmpeg_FFmpegJni_execute(JNIEnv *env, jclass type, jobjectArray
     for (i = 0; i < argc; i++) {
         auto js = (jstring) env->GetObjectArrayElement(commands, i);
         argv[i] = (char *) env->GetStringUTFChars(js, 0);
+        LOGD("Arctan --- argv[%d] %s",i,argv[i]);
     }
-    LOGD("Arctan ---------- 4 begin--------- %p codec %p",formatContext ,codec);
-
+    LOGD("Arctan ---------- 4 2begin--------- %p codec %p",formatContext ,codec);
+    return main(argc, argv);
 }
 
 extern "C"

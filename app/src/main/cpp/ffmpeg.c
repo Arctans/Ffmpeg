@@ -40,7 +40,8 @@
 #include <unistd.h>
 #endif
 
-extern "C"{
+#include "android_log.h"
+
 #include "libavformat/avformat.h"
 #include "libavdevice/avdevice.h"
 #include "libswresample/swresample.h"
@@ -70,7 +71,7 @@ extern "C"{
 #include "libavfilter/avfilter.h"
 #include "libavfilter/buffersrc.h"
 #include "libavfilter/buffersink.h"
-}
+#include "ffmpeg.h"
 
 
 #if HAVE_SYS_RESOURCE_H
@@ -103,8 +104,7 @@ extern "C"{
 #endif
 
 #include <time.h>
-
-
+#include <libavutil/avassert.h>
 
 
 const char program_name[] = "ffmpeg";
@@ -4789,7 +4789,7 @@ int main(int argc, char **argv)
     int64_t ti;
 
     init_dynload();
-
+    LOGD("Arctan enter ffmpeg.c");
     register_exit(ffmpeg_cleanup);
 
     setvbuf(stderr,NULL,_IONBF,0); /* win32 runtime needs this */

@@ -6,7 +6,13 @@ find_library(android-lib android)
 add_library(ffmpeg_jni
         SHARED
         src/main/cpp/ffmpeg_jni.cpp
-        #src/main/cpp/ffmpeg.c
+        src/main/cpp/ffmpeg_filter.c
+        src/main/cpp/ffmpeg_hw.c
+        src/main/cpp/ffmpeg_opt.c
+        src/main/cpp/ffmpeg_cuvid.c
+        src/main/cpp/cmdutils.c
+        src/main/cpp/ffmpeg.c
+#        src/main/cpp/include/libpostproc/postprocess.c
         )
 
 set(JNI_LIBS_DIR ${CMAKE_SOURCE_DIR}/libs)

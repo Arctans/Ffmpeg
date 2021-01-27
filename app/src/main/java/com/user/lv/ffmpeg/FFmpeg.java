@@ -34,7 +34,7 @@ enum  FFmpeg {
      }
 
      private void run(@NonNull final String[] cmd,@NonNull final Callback callback){
-         if(PermissionHelper.hasWrieteAndReadStoragePermission(App.get())){
+         if(!PermissionHelper.hasWrieteAndReadStoragePermission(App.get())){
              AppExecutors.executeMain(new Runnable() {
                  @Override
                  public void run() {
